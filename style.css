@@ -44,8 +44,12 @@ main {
   height: 500px;
 }
 
-#family, #contents-to-learn {
+#family, #contents-to-learn, #textarea-content {
   display: flex;
   flex-direction: column;
 }
 
+textarea {
+  resize: vertical;
+  max-height: 300px;
+}
