@@ -12,8 +12,9 @@
     <img src="images/trybewarts-header-logo.svg" alt="Logo Trybewarts" class="trybewarts-header-logo">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <form action="" class="trybewarts-login" method="GET">
-      <input id="input-email" type="email" name="email" placeholder="Email">
-      <input id="input-password" type="password" name="password" placeholder="Senha">
+      <input id="input-email-login" type="email" name="email" placeholder="Email">
+      <input id="input-password" type="password" name="password" placeholder="Senha" maxlength="
+      6">
       <button id="button-login" type="submit">Entrar</button>
     </form>
   </header>
@@ -32,12 +33,25 @@
           <option id="pytherina-house" value="Pytherina">Pytherina</option>  
         </select>
       </div>
+      <div id="family">
+        <label for="" id="label-family">Qual sua família?</label>
+        <label for="frontend">
+          <input type="radio" name="family" value="Frontend" id="frontend" checked> Frontend
+        </label>
+        <label for="backend">
+          <input type="radio" name="family" value="Backend" id="backend"> Backend
+        </label>
+        <label for="fullstack">
+          <input type="radio" name="family" value="FullStack" id="fullstack"> FullStack
+        </label>
+      </div>
+      <!-- <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
+      <input type="checkbox" value="HoFs" name="" id=""> -->
     </form>
     <div>
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Brasão">
     </div>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
