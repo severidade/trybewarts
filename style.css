@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+* , *:before , *:after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -13,16 +13,16 @@ html {
 }
 
 .header {
- display: flex;
- background-color: var(--primary-color);
- justify-content: space-between;
- color: white;
- align-items: center;
- height: 70px;
- padding: 10px 20px;
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  height: 70px;
+  padding: 10px 20px;
 }
 
-.header img.trybewarts-header-logo {
+img.trybewarts-header-logo {
   height: 100%;
 }
 
@@ -44,7 +44,7 @@ main {
   height: 500px;
 }
 
-#family, #contents-to-learn, #textarea-content {
+#family , #contents-to-learn , #textarea-content {
   display: flex;
   flex-direction: column;
 }
