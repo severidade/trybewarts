@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgb(50, 167, 145);
+}
+
+header {
+ display: flex;
+ background-color: var(--primary-color);
+ justify-content: space-between;
+}
+
+.trybewarts-login {
+  display: flex;
+}
