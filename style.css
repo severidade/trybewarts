@@ -44,7 +44,7 @@ main {
   height: 500px;
 }
 
-#family {
+#family, #contents-to-learn {
   display: flex;
   flex-direction: column;
 }
