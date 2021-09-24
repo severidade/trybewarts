@@ -5,7 +5,7 @@ const agreement = document.getElementById('agreement');
 const submit = document.getElementById('submit-btn');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
-const feedBack= window.location.search.replace("?", "");
+const feedBack = window.location.search.replace('?', '');
 const replaceContent = document.getElementById('main_conteiner');
 
 login.addEventListener('click', () => {
@@ -16,8 +16,8 @@ login.addEventListener('click', () => {
   }
 });
 
-agreement.addEventListener('click', () =>{
-  if(agreement.checked){
+agreement.addEventListener('click', () => {
+  if (agreement.checked) {
     submit.disabled = false;
   } else {
     submit.disabled = true;
@@ -25,17 +25,17 @@ agreement.addEventListener('click', () =>{
 });
 
 textarea.addEventListener('input', () => {
-  let counterTextArea = textarea.value.split('').length;
-  let characterCounter = 500 - counterTextArea;
+  const counterTextArea = textarea.value.split('').length;
+  const characterCounter = 500 - counterTextArea;
   counter.innerHTML = characterCounter;
 });
 
-function clearForm (){
-  replaceContent.innerHTML = "";
+function clearForm() {
+  replaceContent.innerHTML = '';
 }
 
 submit.addEventListener('click', () => {
-  const itens = feedBack.split("&");
+  const itens = feedBack.split('&');
   const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
   const house = `Casa: ${itens[3].slice(6)}`;
 
@@ -43,5 +43,4 @@ submit.addEventListener('click', () => {
 
   replaceContent.innerHTML = `<p>${fullName}</p>
   <p>${house}</p>`;
-
 });
