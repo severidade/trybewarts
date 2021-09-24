@@ -3,6 +3,8 @@ const password = document.getElementById('input-password');
 const login = document.getElementById('button-login');
 const agreement = document.getElementById('agreement');
 const submit = document.getElementById('submit-btn');
+const textarea = document.getElementById('textarea');
+const counter = document.getElementById('counter');
 
 login.addEventListener('click', () => {
   if (eMail.value !== 'tryber@teste.com' && password.value !== '1234546') {
@@ -18,4 +20,10 @@ agreement.addEventListener('click', () =>{
   } else {
     submit.disabled = true;
   }
+});
+
+textarea.addEventListener('keydown', () => {
+  let counterTextArea = textarea.value.split('').length;
+  let characterCounter = 500 - counterTextArea;
+  counter.innerHTML = characterCounter;
 });
