@@ -18,4 +18,4 @@ agreement.addEventListener('click', () =>{
   } else {
     submit.disabled = true;
   }
-}
+});
