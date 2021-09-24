@@ -53,3 +53,7 @@ textarea {
   resize: vertical;
   max-height: 300px;
 }
+
+#main_conteiner  {
+  width: 50vw;
+}
