@@ -34,13 +34,57 @@ function clearForm() {
   replaceContent.innerHTML = '';
 }
 
-submit.addEventListener('click', () => {
-  const itens = feedBack.split('&');
-  const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
-  const house = `Casa: ${itens[3].slice(6)}`;
+// submit.addEventListener('click', () => {
+//   // const itens = feedBack.split('&');
+//   // const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
+//   // const house = `Casa: ${itens[3].slice(6)}`;
+
+//   clearForm();
+
+//   // replaceContent.innerHTML = `<p>${fullName}</p>
+//   // <p>${house}</p>`;
+// });
+
+
+const contentsToLearn = document.querySelectorAll('#contents-to-learn label input');
+const contentArray = '';
+function conteudos(){
+  for (let index = 0; index < contentsToLearn.length; index += 1) {
+    if (contentsToLearn[index].checked === true) {
+      contentArray.push(`${contentsToLearn[index].value}`);
+      }
+  }
+  return contentArray;
+}
+
+
+
+submit.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  // var formdata = new FormData(document.getElementById(formId));
+
+  const data = new FormData(document.getElementById('evaluation-form'));
+  // const itens = feedBack.split('&');
+  // const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
+  // const house = `Casa: ${itens[3].slice(6)}`;
+  
+  const name = data.get('nome');
+  const lastName = data.get('sobrenome');
+  const value = data.get('email');
+  const familia = data.get('family');
+  const casa = data.get('casas');
+  
+
+  console.log({ value });
+  console.log({ familia });
+  console.log({ casa });
+  // console.log({ contentsToLearn });
 
   clearForm();
 
-  replaceContent.innerHTML = `<p>${fullName}</p>
-  <p>${house}</p>`;
+  replaceContent.innerHTML = `<p>${value}</p>
+  <p>${familia}</p>
+  <p> ${conteudos()} </p>`; 
 });
+
