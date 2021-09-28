@@ -18,12 +18,15 @@ html {
   justify-content: space-between;
   color: white;
   align-items: center;
-  height: 70px;
-  padding: 10px 20px;
+  min-height: 70px;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 20px;
+  position: relative;
 }
 
 .trybewarts-header-logo {
-  height: 100%;
+  height: 60px;
 }
 
 .trybewarts-login {
@@ -36,7 +39,7 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 675px;
+  width: 675px; /*Isso era pré requisito*/ 
   flex-direction: column;
 }
 
@@ -55,5 +58,65 @@ textarea {
 }
 
 #main_conteiner {
-  width: 50vw;
+  /* flex-grow: 1; */
+}
+
+#casas_brasao {
+  /* flex-grow: 1; */
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    background-color: green;
+  }
+
+  /* Formatação do menu */
+
+  .header {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 20px;
+  }
+  
+  .trybewarts-login {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #input-email-login, #input-password {
+    height: 40px;
+    border-radius: 6px;
+    border: 0;
+    flex-grow: 1;
+}
+
+  #button-login {
+    width: 100%;
+  }
+
+  /* Começo da formatação do formulário */
+  main {
+    flex-direction: column;
+  }
+  
+  #main_conteiner {
+    order: 2;
+    width: 90%;
+    margin: auto;
+    background-color: violet;
+  }
+
+  #casas_brasao {
+    width: 100%;
+    height: 25vh;
+    order: 1;
+  }
+  
+  #trybewarts-forms-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
 }

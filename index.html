@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trybe Warts</title>
+  <title>🧙‍♂️ - Trybe Warts</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,12 +21,15 @@
   <main>
     <div id="main_conteiner">
       <form method="GET" id="evaluation-form">
+  
         <div id="full-name">
           <input id="input-name" name="nome" type="text" placeholder="Nome">
           <input id="input-lastname" name="sobrenome" type="text" placeholder="Sobrenome">
         </div>
+  
         <div id="email-house">
           <input id="input-email" name="email" type="email" placeholder="Email">
+  
           <select name="casas" id="house">
             <option id="gitnoria-house" value="Gitnória">Gitnória</option>
             <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
@@ -34,39 +37,24 @@
             <option id="pytherina-house" value="Pytherina">Pytherina</option>  
           </select>
         </div>
+  
         <div id="family">
           <label for="" id="label-family">Qual sua família?</label>
-          <label for="frontend">
-            <input type="radio" name="family" value="Frontend" id="frontend" checked> Frontend
-          </label>
-          <label for="backend">
-            <input type="radio" name="family" value="Backend" id="backend"> Backend
-          </label>
-          <label for="fullstack">
-            <input type="radio" name="family" value="FullStack" id="fullstack"> FullStack
-          </label>
+          <label for="frontend"> <input type="radio" name="family" value="Frontend" id="frontend" checked> Frontend </label>
+          <label for="backend"> <input type="radio" name="family" value="Backend" id="backend"> Backend </label>
+          <label for="fullstack"> <input type="radio" name="family" value="FullStack" id="fullstack"> FullStack </label>
         </div>
+  
         <div id="contents-to-learn">
           <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
-          <label for="hofs">
-            <input type="checkbox" value="HoFs" class="conteudo subject" name="content" id="hofs"> HoFs          
-          </label>
-          <label for="jest">
-            <input type="checkbox" value="Jest" class="conteudo subject" name="content" id="jest"> Jest  
-          </label>
-          <label for="promises">
-            <input type="checkbox" value="Promises" class="conteudo subject" name="content" id="promises"> Promises
-          </label>
-          <label for="react">
-            <input type="checkbox" value="React" class="conteudo subject" name="content" id="react"> React
-          </label>
-          <label for="sql">
-            <input type="checkbox" value="SQL" class="conteudo subject" name="content" id="sql"> sql
-          </label>
-          <label for="phyton">
-            <input type="checkbox" value="Python" class="conteudo subject" name="content" id="phyton"> phyton
-          </label>
+          <label for="hofs"><input type="checkbox" value="HoFs" class="conteudo subject" name="content" id="hofs"> HoFs </label>
+          <label for="jest"><input type="checkbox" value="Jest" class="conteudo subject" name="content" id="jest"> Jest </label>
+          <label for="promises"><input type="checkbox" value="Promises" class="conteudo subject" name="content" id="promises"> Promises </label>
+          <label for="react"><input type="checkbox" value="React" class="conteudo subject" name="content" id="react"> React </label>
+          <label for="sql"><input type="checkbox" value="SQL" class="conteudo subject" name="content" id="sql"> sql </label>
+          <label for="phyton"><input type="checkbox" value="Python" class="conteudo subject" name="content" id="phyton"> phyton </label>
         </div>
+  
         <div id="evaluation">
           <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
           <label for="um"><input type="radio" name="rate" value="1" id="um">1</label>
@@ -91,7 +79,8 @@
         <button id="submit-btn" type="submit" disabled>Enviar</button>
       </form>
     </div>
-    <div>
+
+    <div id="casas_brasao">
       <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Brasão">
     </div>
   </main>
