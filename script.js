@@ -5,7 +5,7 @@ const agreement = document.getElementById('agreement');
 const submit = document.getElementById('submit-btn');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
-const feedBack = window.location.search.replace('?', '');
+// const feedBack = window.location.search.replace('?', '');
 const replaceContent = document.getElementById('main_conteiner');
 
 login.addEventListener('click', () => {
@@ -45,46 +45,41 @@ function clearForm() {
 //   // <p>${house}</p>`;
 // });
 
-
-const contentsToLearn = document.querySelectorAll('#contents-to-learn label input');
-const contentArray = '';
-function conteudos(){
-  for (let index = 0; index < contentsToLearn.length; index += 1) {
-    if (contentsToLearn[index].checked === true) {
-      contentArray.push(`${contentsToLearn[index].value}`);
-      }
-  }
-  return contentArray;
-}
-
-
+// const contentsToLearn = document.querySelectorAll('#contents-to-learn label input');
+// const contentArray = '';
+// function conteudos() {
+//   for (let index = 0; index < contentsToLearn.length; index += 1) {
+//     if (contentsToLearn[index].checked === true) {
+//       contentArray.push(`${contentsToLearn[index].value}`);
+//     }
+//   }
+//   return contentArray;
+// }
 
 submit.addEventListener('click', (event) => {
   event.preventDefault();
-
-  // var formdata = new FormData(document.getElementById(formId));
-
   const data = new FormData(document.getElementById('evaluation-form'));
-  // const itens = feedBack.split('&');
-  // const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
-  // const house = `Casa: ${itens[3].slice(6)}`;
-  
   const name = data.get('nome');
   const lastName = data.get('sobrenome');
-  const value = data.get('email');
+  const valueEmail = data.get('email');
   const familia = data.get('family');
   const casa = data.get('casas');
-  
-
-  console.log({ value });
-  console.log({ familia });
-  console.log({ casa });
-  // console.log({ contentsToLearn });
-
+  const conteudos = data.getAll('content');
+  const rate = data.get('rate');
+  const comments = data.get('textarea');
   clearForm();
-
-  replaceContent.innerHTML = `<p>${value}</p>
-  <p>${familia}</p>
-  <p> ${conteudos()} </p>`; 
+  replaceContent.innerHTML = `<p>Nome: ${name} ${lastName}</p>
+  <p>Email: ${valueEmail}</p>
+  <p>Casa: ${casa}</p>
+  <p>Família: ${familia}</p>
+  <p>Matérias: ${conteudos}</p>
+  <p>Avaliação: ${rate}</p>
+  <p>Observações: ${comments}</p>`;
 });
 
+// const itens = feedBack.split('&');
+// const fullName = `Nome: ${itens[0].slice(5)} ${itens[1].slice(10)}`;
+// const house = `Casa: ${itens[3].slice(6)}`;
+// console.log({ value });
+// console.log({ familia });
+// console.log({ casa });
