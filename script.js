@@ -60,14 +60,6 @@ function feedBack(event) {
 
 submit.addEventListener('click', feedBack);
 
-const loginAvatar = document.querySelector('.trybewarts-login:before');
-
-function ativaMenu (){
-  alert("Eu sou um alert!");
-}
-
-loginAvatar.addEventListener('click', ativaMenu);
-
 // na linha 58 conteúdos retorna um array com o .join foi possível formatar para que houvesse espaço entre os itens e a vírgula.
 
 // submit.addEventListener('click', () => {
