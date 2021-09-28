@@ -39,7 +39,7 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 675px; /*Isso era pré requisito*/ 
+  width: 675px;
   flex-direction: column;
 }
 
@@ -65,7 +65,7 @@ textarea {
   flex-grow: 1;
 } */
 
-@media screen and (max-width: 414px) {
+@media screen and ( max-width : 414px ) {
   body {
     background-color: green;
   }
@@ -87,7 +87,7 @@ textarea {
   #input-email-login, #input-password {
     height: 40px;
     border-radius: 6px;
-    border: 0;
+    border: none;
     flex-grow: 1;
 }
 
