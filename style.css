@@ -39,7 +39,7 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 675px; /*Isso era pré requisito*/ 
+  width: 675px; /* Isso era pré requisito */
   flex-direction: column;
 }
 
@@ -65,7 +65,7 @@ textarea {
   flex-grow: 1;
 } */
 
-@media screen and (max-width: 414px) {
+@media screen and ( max-width : 414px ) {
   body {
     background-color: green;
   }
@@ -83,22 +83,12 @@ textarea {
     gap: 20px;
   }
 
-  .trybewarts-login::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    background: olive;
-  }
-
   #input-email-login, #input-password {
     height: 40px;
     border-radius: 6px;
     border: 0;
     flex-grow: 1;
-}
+  }
 
   #button-login {
     width: 100%;
