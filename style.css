@@ -57,13 +57,13 @@ textarea {
   max-height: 300px;
 }
 
-#main_conteiner {
-  /* flex-grow: 1; */
+/* #main_conteiner {
+  flex-grow: 1;
 }
 
 #casas_brasao {
-  /* flex-grow: 1; */
-}
+  flex-grow: 1;
+} */
 
 @media screen and (max-width: 414px) {
   body {
