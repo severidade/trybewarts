@@ -66,6 +66,7 @@ textarea {
 } */
 
 @media screen and ( max-width : 414px ) {
+  
   body {
     background-color: green;
   }
@@ -83,7 +84,7 @@ textarea {
     gap: 20px;
   }
 
-  #input-email-login, #input-password {
+  #input-email-login , #input-password {
     height: 40px;
     border-radius: 6px;
     border: 0;
