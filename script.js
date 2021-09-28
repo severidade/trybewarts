@@ -31,9 +31,8 @@ textarea.addEventListener('input', () => {
   counter.innerHTML = characterCounter;
 });
 
-
 // Retorna os dados do formulario em como Feedback a pessoa usuaria após o envio do formulário
-// Apaga conteúdo do html 
+// Apaga conteúdo do html
 function clearForm() {
   replaceContent.innerHTML = '';
 }
@@ -55,13 +54,13 @@ function feedBack(event) {
   replaceContent.innerHTML = `
   <p>Nome: ${nameRetorno} ${lastNameRetorno}</p> <p>Email: ${emailRetorno}</p>
   <p>Casa: ${casaRetorno}</p> <p>Família: ${familiaRetorno}<p>
-  <p>Matérias: ${conteudosRetorno.join(", ")}</p>
-  <p>Avaliação: ${rateRetorno}; <div><p>Observações: ${textoRetorno}</p></div>`; 
+  <p>Matérias: ${conteudosRetorno.join(', ')}</p>
+  <p>Avaliação: ${rateRetorno}; <div><p>Observações: ${textoRetorno}</p></div>`;
 }
 
 submit.addEventListener('click', feedBack);
 
-// na linha 58 conteúdos retorna um array com o .join foi possível formatar para que houvesse espaço entre os itens e a vírgula. 
+// na linha 58 conteúdos retorna um array com o .join foi possível formatar para que houvesse espaço entre os itens e a vírgula.
 
 // submit.addEventListener('click', () => {
 //   // const itens = feedBack.split('&');
@@ -73,6 +72,3 @@ submit.addEventListener('click', feedBack);
 //   // replaceContent.innerHTML = `<p>${fullName}</p>
 //   // <p>${house}</p>`;
 // });
-
-
-// ver isso https://www.alura.com.br/artigos/javascript-quando-devo-usar-foreach-e-map?gclid=Cj0KCQjw18WKBhCUARIsAFiW7JxmXaZdlDmxJWN5bZyE_oon-sspF5vcQGtRBB4Kg4FhnJXBsQwyQW8aAiFsEALw_wcB
