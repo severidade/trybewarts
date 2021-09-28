@@ -36,7 +36,7 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 675px;
+  width: 675px;/*Isso era pré requisito*/ 
   flex-direction: column;
 }
 
@@ -55,5 +55,9 @@ textarea {
 }
 
 #main_conteiner {
-  width: 50vw;
+  flex-grow: 1;
+}
+
+#casas_brasao {
+  flex-grow: 1;
 }
