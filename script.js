@@ -5,7 +5,9 @@ const agreement = document.getElementById('agreement');
 const submit = document.getElementById('submit-btn');
 const textarea = document.getElementById('textarea');
 const counter = document.getElementById('counter');
-const replaceContent = document.getElementById('main_conteiner');
+// const replaceContent = document.getElementById('main_conteiner');
+const replaceContent = document.getElementById('evaluation-form');
+// Guilherme o nosso erro era apagar a tag form
 
 login.addEventListener('click', () => {
   if (eMail.value !== 'tryber@teste.com' && password.value !== '1234546') {
@@ -31,7 +33,6 @@ textarea.addEventListener('input', () => {
 
 
 // Retorna os dados do formulario em como Feedback a pessoa usuaria após o envio do formulário
-
 // Apaga conteúdo do html 
 function clearForm() {
   replaceContent.innerHTML = '';
@@ -54,8 +55,8 @@ function feedBack(event) {
   replaceContent.innerHTML = `
   <p>Nome: ${nameRetorno} ${lastNameRetorno}</p> <p>Email: ${emailRetorno}</p>
   <p>Casa: ${casaRetorno}</p> <p>Família: ${familiaRetorno}<p>
-  <p>Matérias: ${conteudosRetorno}.</p>
-  <p>Sua Avaliação: ${rateRetorno}; <div><p>Seu comentário: ${textoRetorno}</p></div>`; 
+  <p>Matérias: ${conteudosRetorno}</p>
+  <p>Avaliação: ${rateRetorno}; <div><p>Observações: ${textoRetorno}</p></div>`; 
 }
 
 submit.addEventListener('click', feedBack);
