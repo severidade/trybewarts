@@ -66,7 +66,7 @@ textarea {
 } */
 
 @media screen and ( max-width : 414px ) {
-  
+
   body {
     background-color: green;
   }
@@ -78,7 +78,7 @@ textarea {
     overflow: visible;
     gap: 20px;
   }
-  
+
   .trybewarts-login {
     flex-wrap: wrap;
     gap: 20px;
@@ -99,7 +99,7 @@ textarea {
   main {
     flex-direction: column;
   }
-  
+
   #main_conteiner {
     order: 2;
     width: 90%;
@@ -113,7 +113,7 @@ textarea {
     height: 25vh;
     order: 1;
   }
-  
+
   #trybewarts-forms-logo {
     height: 100%;
     width: 100%;
